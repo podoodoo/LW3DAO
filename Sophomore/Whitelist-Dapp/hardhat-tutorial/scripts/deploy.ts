@@ -2,7 +2,7 @@ import { ethers } from "hardhat"
 
 async function main() {
     const whitelistContract = await ethers.getContractFactory("Whitelist")
-    const deployedWhitelistContract = await whitelistContract.deploy()
+    const deployedWhitelistContract = await whitelistContract.deploy(10)
     await deployedWhitelistContract.deployed()
 
     console.log(
